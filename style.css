@@ -1,0 +1,123 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+#tablero {
+    display: flex;
+}
+
+.column {
+    margin-left: 0px;
+}
+
+.escotilla {
+    background-color: rebeccapurple;
+    border: 3px solid gray;
+    width: 44px;
+    height: 44px;
+}
+
+.puntos {
+    width: 46px;
+    height: 46px;
+    border-top: 2px solid #eee;
+    border-left: 2px solid #eee;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    background-color: #cfcfcf;
+    background-size: contain;
+}
+
+.posicionOcupada {
+    width: 46px;
+    height: 46px;
+    border-top: 2px solid #eee;
+    border-left: 2px solid #eee;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    background-color: #cfcfcf;
+    background-size: contain;
+}
+
+.objetosEspaciales {
+    width: 50px;
+    height: 50px;
+    background-color: greenyellow;
+    background-size: contain;
+}
+
+#spaceCowbow {
+    background-image: url('img/astronauta.png');
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+#robotAzul {
+    background-image: url('img/robotazul.png');
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+#robotMorado {
+    background-image: url('img/robotmorado.png');
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+#robotCeleste {
+    background-image: url('img/robotceleste.png');
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+#robotCoral {
+    background-image: url('img/robotcoral.png');
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+#robotVerde {
+    background-image: url('img/robotverde.png');
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.ancho {
+    width: 330px;
+    padding: 10px;
+}
+
+#selector {
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #eee;
+    text-align: center;
+    background-color: #9E005D;
+    padding: 15px;
+    border-top: 2px solid #eee;
+    border-left: 2px solid #eee;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+}
+
+#gameOver {
+    position: absolute;
+    left: 150px;
+    top: 200px;
+    width: 350px;
+    height: 200px;
+}
