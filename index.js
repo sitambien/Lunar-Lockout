@@ -10,17 +10,18 @@ let dicionarioJuego = {
     7: 'robotVerde',
     8: 'robotMagenta',
     9: 'robotCoral',
+    10: 'espacio'
 }
 
 // Diseño inicial del tablero
 let tablero = [
-    [2, 2, 2, 2, 2, 2, 2],
-    [2, 1, 1, 1, 1, 1, 2],
-    [2, 1, 1, 1, 1, 1, 2],
-    [2, 1, 1, 0, 1, 1, 2],
-    [2, 1, 1, 1, 1, 1, 2],
-    [2, 1, 1, 1, 1, 1, 2],
-    [2, 2, 2, 2, 2, 2, 2]
+    [ 10 ,  10 ,  10 ,  10 ,  10 ,  10 , 10 ],
+    [ 10 ,  1  ,  1  ,  1  ,  1  ,  1  , 10 ],
+    [ 10 ,  1  ,  1  ,  1  ,  1  ,  1  , 10 ],
+    [ 10 ,  1  ,  1  ,  0  ,  1  ,  1  , 10 ],
+    [ 10 ,  1  ,  1  ,  1  ,  1  ,  1  , 10 ],
+    [ 10 ,  1  ,  1  ,  1  ,  1  ,  1  , 10 ],
+    [ 10 ,  10 ,  10 ,  10 ,  10 ,  10 , 10 ]
 ];
 
 // Pasar el tablero al HTML 
@@ -45,6 +46,7 @@ function drawTablero() {
 
 // Cargar etapa
 let nivel = 1;
+let perdiste = 0;
 
 
 // Inicialización de los objetos

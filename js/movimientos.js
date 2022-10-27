@@ -82,7 +82,7 @@ document.onkeydown = function(e){
             // Desocupando la casilla x0
             tablero[spaceCowbow.y][spaceCowbow.x] = 1;
             // Moviendo la ficha
-            while ((tablero[spaceCowbow.y][spaceCowbow.x+1] != 2) && spaceCowbow.x <= 5) {
+            while ((tablero[spaceCowbow.y][spaceCowbow.x+1] != 2) && spaceCowbow.x <= 4) {
                 spaceCowbow.x++;
             }
             // Ocupando la casilla x1
@@ -93,7 +93,7 @@ document.onkeydown = function(e){
             console.log("cowbow arriba");
             // Desocupando la casilla x0
             tablero[spaceCowbow.y][spaceCowbow.x] = 1;
-            while ((tablero[spaceCowbow.y-1][spaceCowbow.x] != 2) && spaceCowbow.y >= 0) {
+            while ((tablero[spaceCowbow.y-1][spaceCowbow.x] != 2) && spaceCowbow.y >= -1) {
                 spaceCowbow.y--;
             }
             // Ocupando la casilla x1
@@ -107,9 +107,17 @@ document.onkeydown = function(e){
             // Moviendo la ficha
             while ((tablero[spaceCowbow.y+1][spaceCowbow.x] != 2) && spaceCowbow.y <= 5) {
                 spaceCowbow.y++;
+                console.log(spaceCowbow.y);
+                if(spaceCowbow.y > 5) {
+                    perdiste = 1;
+                    console.log("perdiste");
+                }
+                setTimeout(drawSpaceCowbow(), 5500);
             }
             // Ocupando la casilla x1
-            tablero[spaceCowbow.y][spaceCowbow.x] = 2;
+            if (perdiste != 1) {
+                tablero[spaceCowbow.y][spaceCowbow.x] = 10;
+            }
         }
     }
 
@@ -322,7 +330,7 @@ document.onkeydown = function(e){
     }
 
     drawTablero();
-    drawSpaceCowbow();
+    setTimeout(drawSpaceCowbow(), 5500);
     drawRobotCoral();
     drawRobotAzul();
     drawRobotCeleste();
